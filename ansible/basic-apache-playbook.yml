@@ -1,0 +1,14 @@
+# playbook.yml
+# Author: Daniel Mabbett
+
+---
+
+- name: 'Provision Image'
+  hosts: default
+  become: true
+
+  tasks:
+    - name: install Apache
+      package:
+        name: 'httpd'
+        state: present
